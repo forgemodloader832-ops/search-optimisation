@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геймдизайн: тогда и сейчас</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+            border: 1px solid #00ffff33;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00ffff;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .intro {
+            background: #252525;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 5px solid #00ffff;
+            font-size: 1.1rem;
+        }
+
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .column {
+            flex: 1 1 300px;
+            background: #202020;
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+        }
+
+        .column h2 {
+            color: #00ffff;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 1px dashed #00ffff;
+            padding-bottom: 10px;
+        }
+
+        .column ul {
+            list-style-type: none;
+        }
+
+        .column li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .column li::before {
+            content: "▹";
+            color: #00ffff;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .comparison {
+            margin: 50px 0;
+        }
+
+        .comparison h2 {
+            text-align: center;
+            color: #00ffff;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #252525;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        th {
+            background: #00ffff;
+            color: #0f0f0f;
+            padding: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            color: #00ffff;
+            width: 30%;
+        }
+
+        .conclusion {
+            background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0 20px;
+            text-align: center;
+            border: 1px solid #00ffff55;
+        }
+
+        .conclusion h3 {
+            color: #00ffff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .conclusion p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            th {
+                font-size: 1rem;
+                padding: 10px;
+            }
+            td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕹️ Геймдизайн: эволюция</h1>
+            <div class="subtitle">От пиксельных приключений до фотореалистичных миров</div>
+        </header>
+
+        <section class="intro">
+            <p>Геймдизайн за последние десятилетия изменился кардинально. Если раньше разработчики были ограничены техническими возможностями, то сегодня перед ними открыты почти любые горизонты. Но значит ли это, что старые игры были хуже? Давайте сравним ключевые подходы к проектированию игр в разные эпохи.</p>
+        </section>
+
+        <div class="columns">
+            <div class="column">
+                <h2>🕰️ Старая школа</h2>
+                <ul>
+                    <li><strong>Ограничения железа</strong> — маленькие объёмы памяти, слабые процессоры заставляли экономить на всём.</li>
+                    <li><strong>Сложность как основа</strong> — игры были намеренно сложными, чтобы растянуть время прохождения.</li>
+                    <li><strong>Пиксельная графика</strong> — художественный стиль рождался из технических ограничений.</li>
+                    <li><strong>Линейность и аркады</strong> — чёткие уровни, ограниченные жизни, высокая реиграбельность за счёт скилла.</li>
+                    <li><strong>Минимум текста</strong> — сюжет часто умещался в буклете или на одном экране.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>🚀 Современность</h2>
+                <ul>
+                    <li><strong>Фотореализм и мощь</strong> — неограниченные (почти) ресурсы для графики и физики.</li>
+                    <li><strong>Доступность</strong> — плавные кривые сложности, обучение, подсказки.</li>
+                    <li><strong>Открытые миры</strong> — свобода действий, нелинейные сюжеты, побочные квесты.</li>
+                    <li><strong>Нарратив и эмоции</strong> — игры как кино: проработанные персонажи, диалоги, кат-сцены.</li>
+                    <li><strong>Монетизация и сервисы</strong> — DLC, battle pass, микротранзакции меняют дизайн.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="comparison">
+            <h2>⚔️ Сравнение в деталях</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Аспект</th>
+                        <th>Старые игры</th>
+                        <th>Современные игры</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Основной вызов</td>
+                        <td>Технические ограничения</td>
+                        <td>Огромный выбор инструментов</td>
+                    </tr>
+                    <tr>
+                        <td>Геймплейный фокус</td>
+                        <td>Механика и рефлексы</td>
+                        <td>Погружение и история</td>
+                    </tr>
+                    <tr>
+                        <td>Реиграбельность</td>
+                        <td>За счёт сложности</td>
+                        <td>За счёт контента (рандом, мультиплеер)</td>
+                    </tr>
+                    <tr>
+                        <td>Визуальный стиль</td>
+                        <td>Пиксель-арт, спрайты</td>
+                        <td>3D, HDR, ray tracing</td>
+                    </tr>
+                    <tr>
+                        <td>Звук</td>
+                        <td>Чиптюн, MIDI</td>
+                        <td>Оркестровые саундтреки, пространственный звук</td>
+                    </tr>
+                    <tr>
+                        <td>Сюжет</td>
+                        <td>Условный ("спаси принцессу")</td>
+                        <td>Многослойный, с выбором и последствиями</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="conclusion">
+            <h3>✨ Итог</h3>
+            <p>Геймдизайн не становится лучше или хуже — он просто разный. Старые игры учили нас преодолевать трудности и ценить каждый момент, современные дарят киноэмоции и свободу. Лучшие проекты берут лучшее из обоих миров: сложные механики, но удобный интерфейс; глубокий сюжет, но и отличный геймплей. Понимание этих отличий помогает создавать игры, которые остаются в сердцах навсегда.</p>
+        </section>
+
+        <footer>
+            <p>© 2025, учебный проект. Все права вымышлены. <br> Сделано с 🖤 для изучения эволюции геймдизайна.</p>
+        </footer>
+    </div>
+</body>
+</html>
